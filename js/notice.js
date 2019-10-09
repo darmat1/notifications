@@ -1,4 +1,4 @@
-function notice(message, type = 'info', lifetime = 5000 ) {
+function notice(message, type = 'info', lifetime = 5000) {
     let notice = document.createElement('div');
     let icon = document.createElement('div');
     let close = document.createElement('button');
@@ -28,22 +28,18 @@ function notice(message, type = 'info', lifetime = 5000 ) {
     }
     msg.innerHTML = message;
     addNotice(notice);
-    setTimeout(function () { notice.style.opacity = 1 }, 100);
+    setTimeout(() =>{ notice.style.opacity = 1 }, 100);
     close.onclick = closeNotice;
-    setTimeout(function () { deleteNotice(notice) }, lifetime);
+    setTimeout(() =>{ deleteNotice(notice) }, lifetime);
 }
 
 function closeNotice() {
-    let thisNotice = this;
-    this.parentNode.style.opacity = 0;
-    setTimeout(function () { thisNotice.parentNode.remove() }, 500);
-    let allnotice = document.querySelectorAll('.notice-wrap .notice');
-    if (allnotice.length == 0) document.querySelector('.notice-wrap').remove();
+    deleteNotice(this.parentNode)
 }
 
 function deleteNotice(notice) {
     notice.style.opacity = 0;
-    setTimeout(function () { notice.remove() }, 500);
+    setTimeout(() => { notice.remove() }, 500);
     let allnotice = document.querySelectorAll('.notice-wrap .notice');
     if (allnotice.length == 0) document.querySelector('.notice-wrap').remove();
 }
