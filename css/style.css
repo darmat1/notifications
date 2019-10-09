@@ -1,3 +1,7 @@
+:root{
+    height: 100vh;
+    background: #f5f7fa;
+}
 label{
     display: block;
     margin-bottom: 20px;
