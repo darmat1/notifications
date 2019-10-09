@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Notifications</title>
+    <link rel="stylesheet" href="css/notice.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div>
+        <label>
+            <p> Type of message: </p>
+            <select name="type">
+                <option value="info">Info</option>
+                <option value="success">Success</option>
+                <option value="warning">Warning</option>
+                <option value="error">Error</option>
+            </select>
+        </label>
+    </div>
+    <div>
+        <label>
+            <p> Display time: </p>
+            <input name="timeout" value="3000">
+        </label>
+    </div>
+    <div>
+        <label>
+            <p> Message: </p>
+            <textarea name="message">Some message blablabla...</textarea>
+        </label>
+    </div>
+
+    <button>Show message</button>
+    <script src="js/notice.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

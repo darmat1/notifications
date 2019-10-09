@@ -1,0 +1,11 @@
+label{
+    display: block;
+    margin-bottom: 20px;
+}
+p{
+    margin-top: 0;
+    margin-bottom: 5px;
+}
+input, select, textarea{
+    width: 300px;
+}
