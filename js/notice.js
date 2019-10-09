@@ -1,4 +1,4 @@
-function notice(message, type = 'info', timeremove = 3000 ) {
+function notice(message, type = 'info', lifetime = 5000 ) {
     let notice = document.createElement('div');
     let icon = document.createElement('div');
     let close = document.createElement('button');
@@ -30,7 +30,7 @@ function notice(message, type = 'info', timeremove = 3000 ) {
     addNotice(notice);
     setTimeout(function () { notice.style.opacity = 1 }, 100);
     close.onclick = closeNotice;
-    setTimeout(function () { deleteNotice(notice) }, timeremove);
+    setTimeout(function () { deleteNotice(notice) }, lifetime);
 }
 
 function closeNotice() {
